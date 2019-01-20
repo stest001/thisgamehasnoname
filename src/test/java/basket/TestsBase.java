@@ -1,10 +1,10 @@
 package basket;
 
+import base.BaseSteps;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 import static base.BaseSteps.logIn;
-import static base.BaseSteps.logOut;
 
 public class TestsBase {
 
@@ -15,8 +15,7 @@ public class TestsBase {
 
     @AfterEach
     protected void close() {
-        logOut();
-
+        BaseSteps.close();
     }
 }
 

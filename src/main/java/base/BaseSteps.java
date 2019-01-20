@@ -17,8 +17,12 @@ public abstract class BaseSteps {
     private static final int MILLIS = 1000;
 
     public static void openBrowser() {
-        getDriver().get(TEST_URL);
+        goToHome();
         maximizeBrowserWindow();
+    }
+
+    public static void goToHome() {
+        getDriver().get(TEST_URL);
     }
 
     public static void maximizeBrowserWindow() {
@@ -42,10 +46,7 @@ public abstract class BaseSteps {
         });
     }
 
-    public static void logOut(){
-        new HomePage()
-                .moveMouseOnYourAccountTool()
-                .clickOnSignOut();
+    public static void close() {
         getDriver().close();
     }
 
